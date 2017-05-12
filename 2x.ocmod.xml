@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Remove Compare button</name>
+    <version>1.0</version>
+    <code>compare1</code>
+    <author>http://goo.gl/m2PGTc</author>
+    <link>http://goo.gl/0GUoeQ</link>
+    <file path="catalog/view/theme/*/template/*/*.tpl">
+        <operation>
+            <search><![CDATA[
+            <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+            ]]></search>
+            <add position="replace"><![CDATA[
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
+            ]]></search>
+            <add position="replace"><![CDATA[
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>
